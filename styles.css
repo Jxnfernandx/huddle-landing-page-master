@@ -16,4 +16,67 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
 }
+body {
+    position: relative;
+}
+h1, h2, button {
+    text-transform: capitalize;
+
+}
+h1 {
+    font-size: 3em;
+}
+.main {
+    background-color: beige;
+}
+button {
+    border: none;
+    border-radius: 1em;
+    background-color: var(--pink);
+    color: aliceblue;
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    background-color: blueviolet;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.box {
+    background-color: blue;
+    padding: 10em;
+}
+
+
+
+.grow {
+    display: flex;
+    background-color: oldlace;
+}
+.flowing {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: blanchedalmond;
+}
+.users {
+    display: flex;
+    background-color: aqua;
+}
+.main-footer {
+    background-color: var(--Very-Dark-Cyan);
+    color: var(--Very-Pale-Cyan);
+    width: 100vw;
+    height: 30em;
+}
+.ready-box {
+    background-color: yellow;
+    height: 5em;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+}
+
