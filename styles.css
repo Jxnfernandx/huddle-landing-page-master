@@ -17,9 +17,34 @@
 *::after {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html,
+body {
+    height: 100%;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    
 }
 body {
     position: relative;
+    text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
 }
 h1, h2, button {
     text-transform: capitalize;
@@ -28,9 +53,6 @@ h1, h2, button {
 h1 {
     font-size: 3em;
 }
-.main {
-    background-color: beige;
-}
 button {
     border: none;
     border-radius: 1em;
@@ -38,45 +60,52 @@ button {
     color: aliceblue;
     cursor: pointer;
 }
-.container {
-    display: flex;
-    background-color: blueviolet;
+header {
+    background-color: aqua;
+    /* background: url(images/bg-hero-desktop.svg); */
+    background-size: contain;
+    
 }
-.nav {
+.nav-container {
     display: flex;
     justify-content: space-between;
+    border: solid;
+    align-items: center;
 }
-.box {
-    background-color: blue;
-    padding: 10em;
-}
-
-
-
-.grow {
+.header-container {
     display: flex;
-    background-color: oldlace;
+    border: salmon solid;
+
 }
-.flowing {
+.header-text {
     display: flex;
-    flex-direction: row-reverse;
-    background-color: blanchedalmond;
+    flex-direction: column;
+
 }
-.users {
+.grow-together{
+    background-color: red;
+}
+.container-img-right{
     display: flex;
-    background-color: aqua;
+    border: solid black;
+
 }
-.main-footer {
+footer {
     background-color: var(--Very-Dark-Cyan);
     color: var(--Very-Pale-Cyan);
     width: 100vw;
     height: 30em;
 }
-.ready-box {
-    background-color: yellow;
-    height: 5em;
-    width: 20em;
-    display: flex;
-    flex-direction: column;
-}
 
+.footer-nav a {
+    text-decoration: none;
+    color: var(--Very-Pale-Cyan);
+    text-transform: capitalize;
+}
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+@media (min-width) {
+
+    
+}
