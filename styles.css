@@ -23,6 +23,7 @@
 html,
 body {
     height: 100%;
+    width: 100%;
 
 }
 html {
@@ -134,13 +135,39 @@ main section {
 }
 .image-box img {
     height: auto;
-  }
+}
+.random-div {
+    background-color: hsl(180, 22%, 96%);
+    height: 11em;
+    width: 40em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 20%; /* Position from top */
+    left: 50%; /* Position from left */
+    transform: translate(-50%, -50%); /* Center the element */
+    border-radius: 1em;
+}
+
+
+
 footer {
     background-color: var(--Very-Dark-Cyan);
     color: var(--Very-Pale-Cyan);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    height: 90vh;
+    width: 100%;
+}
+.footer-info {
+    display: flex;
+}
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .contacts, 
 .navigation,
@@ -148,14 +175,28 @@ footer {
     flex: 1;
     padding: 1rem;
 }
-
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2em;
+}
+.company-logo {
+    width: 20em;
+    filter: brightness(0) invert(1);
+    padding-bottom: 3em;
+}
 .location,
 .phone,
 .email {
     display: flex;
     align-items: center;
     gap: 1em;
+}
+.phone a,
+.email a {
     text-decoration: none;
+    color: #fff;
 }
 .navigation {
     display: flex;
@@ -174,6 +215,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
+.footer-nav ul :hover {
+    text-decoration: underline;
+}
 .footer-nav li {
     width: 50%;
     padding: 0.5rem 0;
@@ -183,68 +227,103 @@ footer {
     color: var(--Very-Pale-Cyan);
     text-transform: capitalize;
 }
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1em;
+}
+.social-icons a svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff; 
+}
+.social-icons a svg :hover {
+    fill: var(--pink);
+}
+
 @media (max-width: 600px) {
-    .nav-container {
-        padding: 2em 2em ;
-    }
-    .nav-container a {
-        width: 7em;
-    }
-    .nav-container button {
-        width: 7em;
-        height: 2em;
-    }
-    .header-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .header-text {
-        text-align: center;
-    }
-    .header-text button {
-        width: 23em;
-    }
-    h1 {
-         font-size: 1.6em;
-    }
-    main {
-        padding: 2em;
-    }
-   .text-box {
+.nav-container {
+    padding: 2em 2em ;
+}
+.nav-container a {
+    width: 7em;
+}
+.nav-container button {
+    width: 7em;
+    height: 2em;
+}
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-text {
+    text-align: center;
+}
+.header-text button {
+    width: 23em;
+}
+h1 {
+    font-size: 1.6em;
+}
+main {
+    padding: 2em;
+}
+.text-box {
     align-items: center;
     gap: .5em;
-   }
-   .text-box p {
+}
+.text-box p {
     text-align: center;
-   }
-   .container-img-left,
-   .container-img-right {
+}
+.container-img-left,
+.container-img-right {
     flex-direction: column;
-   }
+}
+.random-div {
+    width: 90%;
+    margin-bottom: -2em;
+}
+.random-div button {
+    width: 20em;
+}
+.random-div h2 {
+    font-size: 1.2em;
+}
 footer {
     flex-direction: column; 
     padding: 1em;
     align-items: start; 
 }
-
+.footer-info {
+    display: flex;
+    flex-direction: column;
+}
 .contacts,
 .navigation {
-    width: 100%; /* Make each section take full width on mobile */
-    text-align: start; /* Center align text in each section */ /* Add some spacing between sections */
+    width: 100%; 
+    text-align: start; 
 }
 .footer-socials {
     padding-left: 2em;
 }
 .footer-nav {
-    width: 100%; /* Make the navigation take full width on mobile */
+    width: 100%; 
 }
 .footer-nav li {
     justify-content: start;
 }
-
 .footer-nav li {
-    width: 100%; /* Make each navigation item take full width on mobile */
-    text-align: start; /* Center align text in navigation items */
+    width: 100%; 
+    text-align: start;
 }
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+.company-logo {
+    width: 10rem;
+    margin-left: 1em;
+    padding-top: 3em;
 }
