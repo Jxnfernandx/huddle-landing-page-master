@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+
+
 :root {
     /* Colors */
 
@@ -8,35 +11,26 @@
     --Very-Pale-Cyan: hsl(193, 100%, 96%);
     --Very-Dark-Cyan: hsl(192, 100%, 9%);
     --Grayish-Blue: hsl(208, 11%, 55%);
-
 }
-
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font: inherit;
+    font-family: 'Open Sans', sans-serif;
 }
 html,
 body {
     height: 100%;
+
 }
 html {
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth; 
 }
 body {
     position: relative;
     text-rendering: optimizeSpeed;
-}
-main, 
-footer,
-header {
-    padding-left: 7em;
-    padding-right: 7em;
 }
 img,
 picture,
@@ -52,11 +46,18 @@ h1, h2, button {
     text-transform: capitalize;
 
 }
-h1 {
-    font-size: 3em;
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
 }
-h2 {
-    font-size: 2em;
+h1 {
+    font-size: 3.5em
+}
+p {
+    color: var(--Grayish-Blue);
+    font-size: 18px
+}
+.nav-container {
+    padding: 2em 5em;
 }
 button {
     border: none;
@@ -64,62 +65,186 @@ button {
     background-color: var(--pink);
     color: aliceblue;
     cursor: pointer;
+    width: 26em;
+    height: 4em;
+}
+.nav-container button {
+    background-color: white;
+    color: var(--Very-Dark-Cyan);
+    width: 15em;
+    height: 3em;
 }
 header {
-    background-image: url("/images/bg-hero-desktop.svg");
+    background-image: url(./images/bg-hero-desktop.svg);
     background-color: var(--Very-Pale-Cyan);
     background-size: contain;
-    
+    margin-bottom: 5em;
+}
+.header-container {
+    display: flex;
+    padding: 3em
+}
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 3em;
+    padding: 3em;
+    flex: 1;
+}
+.header-text p {
+    font-size: 1em;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 main {
     display: flex;
     flex-direction: column;
     gap: 3em;
+    margin-bottom: 7em;
 }
-.header-container {
+.container-img-right {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
-.nav-container {
+.container-img-left {
     display: flex;
-    justify-content: space-between;
-    border: solid;
-    align-items: center;
 }
 .text-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1em;
-    background-color: aqua;
 }
-.text-box  button {
-    width: 50%;
-    height: 3em;
+main,
+footer {
+    padding: 6em;
 }
-section {
-    border: solid black;
-    display: flex;
-
+main section {
+    border: solid rgb(247, 247, 247);
+    border-radius: 2em;
 }
-section img {
-    width: 50%;
+.text-box,
+.box-image {
+    flex: 1;
+    padding: 5em;
 }
+.image-box img {
+    height: auto;
+  }
 footer {
     background-color: var(--Very-Dark-Cyan);
     color: var(--Very-Pale-Cyan);
-    width: 100vw;
-    height: 30em;
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+}
+.contacts, 
+.navigation,
+.copyright {
+    flex: 1;
+    padding: 1rem;
+}
+
+.location,
+.phone,
+.email {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    text-decoration: none;
+}
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Adjust as needed */
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-nav li {
+    width: 50%;
+    padding: 0.5rem 0;
 }
 .footer-nav a {
     text-decoration: none;
     color: var(--Very-Pale-Cyan);
     text-transform: capitalize;
 }
-.footer-nav a:hover {
-    text-decoration: underline;
+@media (max-width: 600px) {
+    .nav-container {
+        padding: 2em 2em ;
+    }
+    .nav-container a {
+        width: 7em;
+    }
+    .nav-container button {
+        width: 7em;
+        height: 2em;
+    }
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-text {
+        text-align: center;
+    }
+    .header-text button {
+        width: 23em;
+    }
+    h1 {
+         font-size: 1.6em;
+    }
+    main {
+        padding: 2em;
+    }
+   .text-box {
+    align-items: center;
+    gap: .5em;
+   }
+   .text-box p {
+    text-align: center;
+   }
+   .container-img-left,
+   .container-img-right {
+    flex-direction: column;
+   }
+footer {
+    flex-direction: column; 
+    padding: 1em;
+    align-items: start; 
 }
-@media (min-width) {
 
-    
+.contacts,
+.navigation {
+    width: 100%; /* Make each section take full width on mobile */
+    text-align: start; /* Center align text in each section */ /* Add some spacing between sections */
+}
+.footer-socials {
+    padding-left: 2em;
+}
+.footer-nav {
+    width: 100%; /* Make the navigation take full width on mobile */
+}
+.footer-nav li {
+    justify-content: start;
+}
+
+.footer-nav li {
+    width: 100%; /* Make each navigation item take full width on mobile */
+    text-align: start; /* Center align text in navigation items */
+}
 }
